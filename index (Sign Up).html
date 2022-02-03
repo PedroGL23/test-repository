@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" title="Color">
+</head>
+
+<script>
+    function hideRegisterForm() {
+        const modal = document.querySelector('#mainDiv');
+        modal.classList.remove('show');
+    }
+
+    function showRegisterForm() {
+        const modal = document.querySelector('#mainDiv');
+        modal.classList.add('show');
+    }
+
+
+
+    function showJson() {
+        var nameVal = document.getElementById("name").value;
+        var surnameVal = document.getElementById("surname").value;
+        var phoneVal = document.getElementById("phone").value;
+        var passwordVal = document.getElementById("password").value;
+
+
+        var month = document.querySelector("#month").value;
+        var day = document.querySelector("#day").value;
+        var year = document.querySelector("#year").value;
+        var birthday = day + "/" + month + "/" + year;
+
+        var female = document.querySelector("#female").checked;
+        var male = document.querySelector("#male").checked;
+        var custom = document.querySelector("#custom").checked;
+        var gender = "";
+
+
+
+
+
+        if (nameVal === "" || surnameVal === "" || phoneVal === "" || passwordVal === "" || month === "" || day === "" || year === "" ||
+            female.checked === false && male.checked === false && custom.checked === false) {
+            alert("Rellene todos los campos.");
+        } else {
+
+            if (female === true) {
+                gender = "female";
+            }
+            if (male === true) {
+                gender = "male";
+            }
+            if (custom === true) {
+                gender = "custom";
+            }
+
+
+            const newUser = {
+                name: nameVal,
+                surname: surnameVal,
+                phone: phoneVal,
+                password: passwordVal,
+                birthday: birthday,
+                gender: gender
+            }
+            alert(JSON.stringify(newUser));
+
+        }
+
+    }
+
+
+
+</script>
+
+
+<body>
+
+    <div>
+        <button onclick="showRegisterForm ()" type="button" class="register-button"> Create new account </button>
+    </div>
+
+
+    <div id='mainDiv' class="main-div">
+        <div class="title-div">
+            <div>
+                <p class="title"> Sign Up</p>
+                <p class="subtitle"> It's quick and easy.</p>
+            </div>
+
+            <div class="cross" onclick="hideRegisterForm()">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/Q0G2UVjVQ4_.png">
+            </div>
+        </div>
+
+        <div class="align">
+
+            <div class="separador-top">
+                <input id="name" type="text" placeholder="First name" class="input-name">
+            </div>
+
+            <div class="separador-top">
+                <input id="surname" type="text" placeholder="Last name" class="input-surname">
+            </div>
+        </div>
+        <div class="align-center">
+
+            <div class="separador-top">
+                <input id="phone" type="tel" placeholder="Mobile number or email" class="phone">
+            </div>
+
+            <div class="separador-top">
+                <input id="password" type="password" placeholder="New password" class="password">
+            </div>
+        </div>
+
+        <div class="margin-bottom">
+
+            <div class="side-margin"> Birthday </div>
+            <div class="align-horizontal">
+                <div>
+                    <select id="month" class="margin">
+                        <option>Jan</option>
+                        <option>Feb</option>
+                        <option>Mar</option>
+                        <option>Apr</option>
+                        <option>May</option>
+                        <option>Jun</option>
+                        <option>Jul</option>
+                        <option>Aug</option>
+                        <option>Sep</option>
+                        <option>Oct</option>
+                        <option>Nov</option>
+                        <option>Dec</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select id="day" class="margin">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select id="year" class="margin">
+                        <option> 1991 </option>
+                        <option> 1992 </option>
+                        <option> 1993 </option>
+                        <option> 1994 </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-margin"> Gender </div>
+
+        <div class="genders">
+            <div class="female">
+                <div> female </div>
+                <div> <input type=radio name="gender" value="female" id="female"> </div>
+
+            </div>
+            <div class="male">
+                <div> male </div>
+                <div> <input type=radio name="gender" value="male" id="male"> </div>
+
+            </div>
+            <div class="custom">
+                <div> custom </div>
+                <div> <input type=radio name="gender" value="custom" id="custom"> </div>
+            </div>
+        </div>
+
+        <div class="terms-text">
+            <p>
+                By clicking Sign Up, you agree to our Terms. Learn how we collect, use and share your data in our Data
+                Policy
+                and how we use cookies and similar technology in our Cookies Policy. You may receive SMS Notifications
+                from us
+                and can opt out any time.
+            </p>
+        </div>
+        <div class="button-div">
+            <div>
+                <button onclick="showJson()" type="button" class="register-button"> Sign Up </button>
+            </div>
+        </div>
+
+
+
+
+
+</body>
+
+</html>

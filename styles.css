@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input{
+    border-color: #e0e2e5;
+    border-style: solid;
+}
+
+select{
+    border-color: #d6dade;
+}
+
+img{
+    width: 24px;
+    height: 24px;
+}
+
+p{
+    font-size: 11px;  
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+select:focus-visible, input:focus-visible{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.main-div{
+    flex-direction: column;
+    border-radius: 5px;
+    background-color:#ffffff;
+    width: 432px;
+    height: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.show{
+    display: block;
+    margin-left: 400px;
+   
+}
+
+
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.subtitle{
+    font-size:15px;
+    margin-left: 10px;
+    color: #606770;
+    
+}
+.side-margin{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.separador-top{
+    margin-top: 5px;
+    width: 194px;
+    height: 40px;
+}
+
+
+
+.title-div{
+    border-bottom: 1px solid #e9ebed;
+    padding-bottom: 5px;
+    display: flex; 
+    justify-content: space-between; 
+    
+}
+
+.cross{
+    padding: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.align{
+    margin-top: 15px;
+    display: inline-flex;
+    margin-left: 5px; 
+}
+
+
+.align-center{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.input-name{
+    border-radius: 5px;
+    background-color:#f5f6f7;
+    width: 180px;
+    height:30px;
+    margin-right:8px;
+}
+
+.input-surname{
+    border-radius: 5px;
+    background-color:#f5f6f7;
+    width: 210px;
+    height: 30px;
+}
+
+.password{
+    border-radius: 5px;
+    background-color:#f5f6f7;
+    width: 406px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.phone{
+    border-radius: 5px;
+    background-color:#f5f6f7;
+    width: 406px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.align-horizontal{
+    display: inline-flex;
+}
+
+select{
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+}
+
+.margin{
+    margin-left: 10px;
+}
+
+.margin-bottom{
+    margin-bottom: 10px;
+}
+    
+
+.genders{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal{
+    display: flex;
+}
+
+
+
+.female{
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 3px;
+    width: 128px;
+    height: 30px;
+    border: 1px solid #e7e9eb;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.male{
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 110px;
+    height: 30px;
+    border: 1px solid #e7e9eb;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.custom{
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 3px;
+    width: 125px;
+    height: 30px;
+    border: 1px solid #e7e9eb;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5px;
+}
+
+
+.register-button{
+        width: 194px;
+        height: 36px;
+        background-color: #00a400;
+        border: none;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 5px;
+        font-weight: bold;
+}
+
+.button-div{
+    background-color: #ffffff;
+    width:432px;
+    height: 100px;
+    display:flex;
+    justify-content:space-around;
+
+ 
+}
+
+.terms-text{
+    margin-left: 5px;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+   
+}
+
